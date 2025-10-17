@@ -122,9 +122,12 @@ Through this project, I learned how to:
 
 ## ✍️ Author
 
-**David Gillick**
-- [LinkedIn](https://linkedin.com/in/davidgillickaws)
-- [Blog](https://medium.com/@david.gillick/cloud-resume-project-08981aefbca1)
+# David Gillick
+
+
+[LinkedIn](https://linkedin.com/in/davidgillickaws)  
+[Blog](https://medium.com/@david.gillick/cloud-resume-project-08981aefbca1)
+
 
 
 
