@@ -131,9 +131,5 @@ Through this project, I learned how to:
 This project is open source and available under the [MIT License](LICENSE).
 
 
-### ✅ Notes
-- Replace placeholders (`yourusername`, `your-production-site-url.com`, etc.).  
-- Add your real architecture diagram to `/assets/architecture.png`.  
-- You can add blog/social links to the Author section.  
 
 
