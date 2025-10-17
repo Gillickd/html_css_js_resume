@@ -1,64 +1,139 @@
-# Resume Website
 
-A personal, responsive resume website built with **HTML**, **CSS**, and **JavaScript**. This project showcases professional experience, skills, projects, and contact information in a clean and modern design.
 
-## 🚀 Features
+# ☁️ Cloud Resume Project 2025 
 
-- Responsive design for desktop, tablet, and mobile
-- Interactive navigation with smooth scrolling
-- Sections for:
-  - About Me
-  - Skills
-  - Projects / Portfolio
-  - Education & Experience
-  - Contact
-- Lightweight and fast (no frameworks, pure HTML/CSS/JS)
-- Easy to customize and expand
+A personal resume website hosted on **AWS** — built as part of my cloud learning journey.  
+This project demonstrates deploying a **serverless web application** using AWS services such as **S3, Lambda, API Gateway, and DynamoDB**.
 
-## 📂 Project Structure
+---
 
-```
-.
-├── index.html    # Main webpage
-│   style.css     # Stylesheet
-│   mediaqueries.css # Stylesheet for device media type
-│   script.js     # JavaScript functionality
-├── /Assets           # Profile picture, project images,icons
-└── README.md         # Project documentation
+## 🌐 Live Demo
+[Visit my live site here](https://davidgillick.co.uk)  
+*(Hosted on AWS S3 with a live visitor counter powered by AWS Lambda and DynamoDB.)*
+
+---
+
+## 🏗️ Project Overview
+This project follows the structure of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/), combining front-end development with AWS cloud services.
+
+**Architecture Flow:**
 ```
 
-## 🛠️ Technologies Used
+User → CloudFront (optional) → S3 (Static Site)
+↓
+API Gateway → Lambda → DynamoDB
 
-- **HTML5** – semantic structure
-- **CSS3** – responsive layout and styling
-- **JavaScript (ES6)** – interactivity and animations
+````
 
-## 🎨 Customization
+---
 
-1. Replace content in `index.html` with your personal details.
-2. Update colors, fonts, and layout in `style.css`.
-3. Modify or add JavaScript effects in `script.js`.
-4. Replace images in `/Assets` with your own.
+## 💡 Features
+- **Static Website** hosted on S3  
+- **Serverless Visitor Counter** using Lambda + DynamoDB  
+- **API Gateway** for communication between front-end and backend  
+- **CI/CD ready** for easy updates via GitHub  
 
-## 📦 Installation & Usage
+---
 
-Clone the repository:
+## 🧩 Tech Stack
+| Layer | Service / Technology |
+|--------|-----------------------|
+| Frontend | HTML, CSS, JavaScript |
+| Hosting | AWS S3 (Static Website Hosting) |
+| Backend | AWS Lambda (Python) |
+| Database | AWS DynamoDB |
+| API | AWS API Gateway |
+| Infrastructure | CloudFormation / Terraform / CDK |
 
-```bash
-git clone https://github.com/Gillickd/html_css_js_resume.git
+---
+
+## ⚙️ Setup Instructions
+To deploy your own version of this site:
+
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/Gillickd/html_css_js_resume.git
+   cd cloud-resume-project-public
+````
+
+2. **Deploy the backend (Lambda, API Gateway, DynamoDB)**
+
+   * Use the templates in `/infrastructure/`
+   * Replace placeholders (e.g., table name, bucket name)
+
+3. **Update environment variables**
+
+   * In Lambda configuration, set:
+
+     ```
+     TABLE_NAME = your-dynamodb-table-name
+     ```
+   * In the website config.json file, replace the API_BASE & API_STAGE placeholder:
+   * Note: if API stage is configured to default, then remove API_STAGE from config.json file
+
+     {
+  "API_BASE": "https://your-api-gateway-url.com", 
+  "API_STAGE": "dev"
+}
+
+4. **Deploy the frontend**
+
+   * Upload website/contents to your S3 bucket.
+   * Enable **Static Website Hosting** in S3 properties.
+
+5. **Test it**
+
+   * Open your S3 website endpoint in a browser.
+   * Confirm that the visitor counter updates correctly.
+
+---
+
+## 📁 Repository Structure
+
+```
+cloud-resume-project-public/
+├── website/           # HTML, CSS, JS files
+├── lambda/            # Lambda function(s)
+├── infrastructure/    # CloudFormation / Terraform / CDK templates
+├── website/assets/    # Diagrams, screenshots, icon and images 
+└── README.md
 ```
 
-Open `index.html` in your browser, or use a local server for development:
+---
 
-```bash
-# Using VS Code Live Server extension
-Right-click -> "Open with Live Server"
-```
+## 🧠 Learnings
 
-## 🌐 Deployment
+Through this project, I learned how to:
 
-You can host this website for free using:
+* Connect **Lambda** functions to **DynamoDB** via **API Gateway**
+* Use **AWS IAM roles** securely
+* Deploy and host a static site on **AWS S3**
+* Understand the fundamentals of **serverless architectures**
+* Manage Infrastructure as Code (IaC) 
 
-- **GitHub Pages**
-- **Netlify**
-- **Vercel**
+---
+
+## 🖼️ Architecture Diagram
+
+![Architecture Diagram](assets/architecture.png)
+
+---
+
+## ✍️ Author
+
+**David Gillick**
+[LinkedIn](https://linkedin.com/in/davidgillickaws) • [Blog](https://medium.com/@david.gillick/cloud-resume-project-08981aefbca1)
+
+---
+
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+
+### ✅ Notes
+- Replace placeholders (`yourusername`, `your-production-site-url.com`, etc.).  
+- Add your real architecture diagram to `/assets/architecture.png`.  
+- You can add blog/social links to the Author section.  
+
+
