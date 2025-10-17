@@ -92,7 +92,8 @@ To deploy your own version of this site:
 
 ```
 cloud-resume-project-public/
-├── website/           # HTML, CSS, JS files
+├── website/           # HTML, CSS, JS & JSON files 
+├          ├── assets/ # Diagrams, screenshots, icon and images 
 ├── lambda/            # Lambda function(s)
 ├── infrastructure/    # CloudFormation / Terraform / CDK templates
 ├── website/assets/    # Diagrams, screenshots, icon and images 
@@ -122,13 +123,10 @@ Through this project, I learned how to:
 ## ✍️ Author
 
 **David Gillick**
-[LinkedIn](https://linkedin.com/in/davidgillickaws) • [Blog](https://medium.com/@david.gillick/cloud-resume-project-08981aefbca1)
+[LinkedIn](https://linkedin.com/in/davidgillickaws)
+[Blog](https://medium.com/@david.gillick/cloud-resume-project-08981aefbca1)
 
----
 
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 
 
