@@ -1,0 +1,4 @@
+{
+  "API_BASE": "https://your-api-gateway-url.com", 
+  "API_STAGE": "dev"
+}

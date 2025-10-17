@@ -169,6 +169,13 @@ section {
     gap: 1rem;
 }
 
+.profile-image {
+    border-radius: 50%;
+    
+    object-fit: cover;
+
+}
+
 /* ICON */
 
 .icon {
@@ -246,6 +253,8 @@ section {
 .about-pic {
 border-radius: 2rem;
 }
+
+
 
 .arrow {
     position: absolute;
